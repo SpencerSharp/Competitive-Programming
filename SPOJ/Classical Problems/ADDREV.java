@@ -3,7 +3,7 @@ import java.util.*;
 import java.math.*;
 import static java.lang.System.out;
 
-public class Spoj42
+public class ADDREV
 {
     public static void main(String[] args) throws IOException
     {

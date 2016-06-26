@@ -3,7 +3,7 @@ import java.util.*;
 import java.math.*;
 import static java.lang.System.out;
 
-public class Spoj1
+public class SpojTemplate
 {
     public static void main(String[] args) throws IOException
     {
@@ -15,14 +15,6 @@ public class Spoj1
         String output = ""; //Write all output to this string
 
         //Code here
-        String line = f.readLine();
-        while(!line.equals("42"))
-        {
-            output += line + "\n";
-            //out.println(output);
-            line = f.readLine();
-        }
-        output = output.substring(0,output.length()-1);
         
         
         
