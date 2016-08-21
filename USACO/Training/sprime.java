@@ -10,7 +10,6 @@ import static java.lang.System.out;
 
 public class sprime
 {
-    
     public static void main(String[] args) throws IOException
     {
         /*

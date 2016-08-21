@@ -18,7 +18,7 @@ public class HANGOVER
         String line = f.readLine();
         while(!line.equals("0.00"))
         {
-            out.println(getNumCardsForLength(0,Double.parseDouble(line)) + " card(s)");
+            writer.println(getNumCardsForLength(0,Double.parseDouble(line)) + " card(s)");
             line = f.readLine();
         }
         

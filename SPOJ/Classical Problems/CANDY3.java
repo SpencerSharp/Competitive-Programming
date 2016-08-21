@@ -47,6 +47,5 @@ public class CANDY3
         //writer.println(output);
         writer.close();
         System.exit(0);
-        
     }
 }

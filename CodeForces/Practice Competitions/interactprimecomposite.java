@@ -7,11 +7,11 @@ public class interactprimecomposite
 {
     public static void main(String[] args) throws IOException
     {
-        BufferedReader f = new BufferedReader(new FileReader("/Users/spencersharp/Desktop/input.txt"));
-        /*
+        //BufferedReader f = new BufferedReader(new FileReader("/Users/spencersharp/Desktop/input.txt"));
+        
         BufferedReader f = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter writer = new PrintWriter(new BufferedOutputStream(System.out));
-        */
+        
         String output = ""; //Write all output to this string
 
         //Code here
