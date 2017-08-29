@@ -55,31 +55,37 @@ public class ONP
     
     public static void main(String[] args) throws IOException
     {
-        BufferedReader f = new BufferedReader(new FileReader("/Users/spencersharp/Desktop/input.txt"));
-        /*
+        //BufferedReader f = new BufferedReader(new FileReader("/Users/spencersharp/Desktop/input.txt"));
+        
         BufferedReader f = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter writer = new PrintWriter(new BufferedOutputStream(System.out));
-        */
+        
         String output = ""; //Write all output to this string
 
         //Code here
-        String input = f.readLine();
-        out.println(makeExpressionOfString(input));
+        int numExpressions = Integer.parseInt(f.readLine());
+        for(int i = 0; i < numExpressions; i++)
+        {
+            String input = f.readLine();
+            output = ""+makeExpressionOfString(input);
+            writer.println(output);
+        }
+        //out.println(makeExpressionOfString(input));
         
         
         //Code here
 
-        out.println(output);
-        /*
-        writer.println(output);
+        //out.println(output);
+        
+        //writer.println(output);
         writer.close();
         System.exit(0);
-        */
+        
     }
     
     public static Expression makeExpressionOfString(String s)
     {
-        out.println(s);
+        //out.println(s);
         
         Expression ret = new Expression();
         if(!doesContainOperation(s))
@@ -101,10 +107,10 @@ public class ONP
         
         ret.setInitial(initExpression);
         ret.setSecond(secondExpression);
-        out.println(operation);
+        //out.println(operation);
         ret.setOperation(operation);
         
-        out.println("RET"+ret);
+        //out.println("RET"+ret);
         
         return ret;
     }
