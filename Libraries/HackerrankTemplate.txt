@@ -1,0 +1,75 @@
+import java.io.*;
+import java.util.*;
+import java.math.*;
+import static java.lang.System.out;
+
+//public class Solution
+public class ${name}
+{
+    public static void main(String[] args) throws IOException
+    {
+        
+        //Use open comment before this line
+        int numFiles = 0;
+        for(int curFileIndex = 0; curFileIndex < numFiles; curFileIndex++)
+        {
+            String inputOutputNumber = ""+curFileIndex;
+            if(inputOutputNumber.length()==1)
+                inputOutputNumber = "0" + inputOutputNumber;
+            long startTime = System.nanoTime();
+            String fileName = "${name}".toLowerCase() + "-testcases";
+            String pathToHackerrankTestingFolder = "/Users/spencersharp/Desktop/HackerrankTesting/";
+            BufferedReader f = new BufferedReader(new FileReader(pathToHackerrankTestingFolder + fileName + "/input/input"+inputOutputNumber+".txt"));
+            PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(pathToHackerrankTestingFolder + fileName + "/testOutput/testOutput"+inputOutputNumber+".txt")));
+            //Comment the end comment after this line
+            
+            /*
+            BufferedReader f = new BufferedReader(new InputStreamReader(System.in));
+            PrintWriter writer = new PrintWriter(new BufferedOutputStream(System.out));
+            */
+            String output = ""; //Write all output to this string
+
+            //Code here
+            
+            
+            
+            
+            
+            //Code here
+            
+            //Use open comment before this line
+            long endTime = System.nanoTime();
+
+            long totalTime = endTime - startTime;
+
+            double totalTimeInSeconds = ((double)totalTime)/1000000000;
+
+            if(totalTimeInSeconds >= 4.0)
+                out.println("TIME LIMIT EXCEEDED");
+            else
+            {
+                boolean isTestOutputCorrect = true;
+                BufferedReader correctOutputReader = new BufferedReader(new FileReader(pathToHackerrankTestingFolder + fileName + "/output/output"+inputOutputNumber+".txt"));
+                BufferedReader testOutputReader = new BufferedReader(new FileReader(pathToHackerrankTestingFolder + fileName + "/testOutput/testOutput"+inputOutputNumber+".txt"));
+                String correctOutputLine;
+                String testOutputLine;
+
+                while((correctOutputLine=correctOutputReader.readLine())!=null && (testOutputLine=testOutputReader.readLine())!=null)
+                {
+                    if(!correctOutputLine.equals(testOutputLine))
+                    {
+                        isTestOutputCorrect = false;
+                        break;
+                    }
+                }
+
+                if(isTestOutputCorrect)
+                    out.println("TEST " + inputOutputNumber + " CORRECT - TIME: " + totalTimeInSeconds);
+                else
+                    out.println("TEST " + inputOutputNumber + " INCORRECT - TIME: " + totalTimeInSeconds);
+            }
+        }
+        //Use close comment after this line
+        
+    }
+}
