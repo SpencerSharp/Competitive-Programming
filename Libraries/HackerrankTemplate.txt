@@ -17,7 +17,7 @@ public class ${name}
             if(inputOutputNumber.length()==1)
                 inputOutputNumber = "0" + inputOutputNumber;
             long startTime = System.nanoTime();
-            String fileName = "${name}".toLowerCase() + "-testcases";
+            String fileName = formatTitle("${name}") + "-testcases";
             String pathToHackerrankTestingFolder = "/Users/spencersharp/Desktop/HackerrankTesting/";
             BufferedReader f = new BufferedReader(new FileReader(pathToHackerrankTestingFolder + fileName + "/input/input"+inputOutputNumber+".txt"));
             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(pathToHackerrankTestingFolder + fileName + "/testOutput/testOutput"+inputOutputNumber+".txt")));
@@ -71,5 +71,19 @@ public class ${name}
         }
         //Use close comment after this line
         
+    }
+
+    public static String formatTitle(String title)
+    {
+        String ret = ""+title.charAt(0);
+        for(int i = 1; i < title.length(); i++)
+        {
+            if(title.charAt(i) >= 'A' && title.charAt(i) <= 'Z')
+            {
+                ret += "-";
+            }
+            ret += title.charAt(i);
+        }
+        return ret.toLowerCase();
     }
 }
