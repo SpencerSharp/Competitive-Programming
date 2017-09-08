@@ -63,6 +63,9 @@ public class ${name}
                     }
                 }
 
+                if(testOutputLine==null && correctOutputLine != null)
+                    isTestOutputCorrect = false;
+
                 if(isTestOutputCorrect)
                     out.println("TEST " + inputOutputNumber + " CORRECT - TIME: " + totalTimeInSeconds);
                 else
