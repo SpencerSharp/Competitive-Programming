@@ -3,43 +3,72 @@ import java.util.*;
 import java.math.*;
 import static java.lang.System.out;
 
-//Link to problem statement: 
+//Link to problem statement: https://www.hackerrank.com/contests/acm-9817/challenges/chess-4
 
 //public class Solution
-public class ${name}
+public class ArksChess
 {
     public static void main(String[] args) throws IOException
     {
-        
+        /*
         //Use open comment before this line
-        int numFiles = 0;
+        int numFiles = 11;
         for(int curFileIndex = 0; curFileIndex < numFiles; curFileIndex++)
         {
             String inputOutputNumber = ""+curFileIndex;
             if(inputOutputNumber.length()==1)
                 inputOutputNumber = "0" + inputOutputNumber;
             long startTime = System.nanoTime();
-            String fileName = formatTitle("${name}") + "-testcases";
+            String fileName = formatTitle("chess-4") + "-testcases";
             String pathToHackerrankTestingFolder = "/Users/spencersharp/Desktop/HackerrankTesting/";
             BufferedReader f = new BufferedReader(new FileReader(pathToHackerrankTestingFolder + fileName + "/input/input"+inputOutputNumber+".txt"));
             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(pathToHackerrankTestingFolder + fileName + "/testOutput/testOutput"+inputOutputNumber+".txt")));
             //Comment the end comment after this line
+            */
             
-            /*
             BufferedReader f = new BufferedReader(new InputStreamReader(System.in));
             PrintWriter writer = new PrintWriter(new BufferedOutputStream(System.out));
-            */
+            
             String output = ""; //Write all output to this string
 
             //Code here
+            int games = Integer.parseInt(f.readLine());
             
-            
-            
-            
-            
+            StringTokenizer st;
+
+            int numDraws = 0;
+
+            int arkWins = 0;
+
+            int knaveWins = 0;
+            for(int a0 = 0; a0 < games; a0++){
+                st = new StringTokenizer(f.readLine());
+                int black = Integer.parseInt(st.nextToken());
+                int white = Integer.parseInt(st.nextToken());
+
+                int total = black + white;
+
+                if(total%4==0 && total%2==0 || total%4!=0 && total%2!=0)
+                {
+                    numDraws++;
+                }
+                else if(total%2==0 && total%4!=0)
+                {
+                    arkWins++;
+                }
+                else
+                {
+                    knaveWins++;
+                }
+            }
+
+            writer.println("Draws: " + numDraws);
+            writer.println("Ark Won: " + arkWins);
+            writer.println("Knave Won: " + knaveWins);
+
             //Code here
             writer.close();
-            
+            /*
             //Use open comment before this line
             long endTime = System.nanoTime();
 
@@ -76,7 +105,7 @@ public class ${name}
             }
         }
         //Use close comment after this line
-        
+        */
     }
 
     public static String formatTitle(String title)

@@ -3,43 +3,42 @@ import java.util.*;
 import java.math.*;
 import static java.lang.System.out;
 
-//Link to problem statement: 
+//Link to problem statement: https://www.hackerrank.com/contests/acm-9817/challenges/salutations
 
 //public class Solution
-public class ${name}
+public class Salutations
 {
     public static void main(String[] args) throws IOException
     {
-        
+        /*
         //Use open comment before this line
-        int numFiles = 0;
+        int numFiles = 1;
         for(int curFileIndex = 0; curFileIndex < numFiles; curFileIndex++)
         {
             String inputOutputNumber = ""+curFileIndex;
             if(inputOutputNumber.length()==1)
                 inputOutputNumber = "0" + inputOutputNumber;
             long startTime = System.nanoTime();
-            String fileName = formatTitle("${name}") + "-testcases";
+            String fileName = formatTitle("Salutations") + "-testcases";
             String pathToHackerrankTestingFolder = "/Users/spencersharp/Desktop/HackerrankTesting/";
             BufferedReader f = new BufferedReader(new FileReader(pathToHackerrankTestingFolder + fileName + "/input/input"+inputOutputNumber+".txt"));
             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(pathToHackerrankTestingFolder + fileName + "/testOutput/testOutput"+inputOutputNumber+".txt")));
             //Comment the end comment after this line
+            */
             
-            /*
             BufferedReader f = new BufferedReader(new InputStreamReader(System.in));
             PrintWriter writer = new PrintWriter(new BufferedOutputStream(System.out));
-            */
+            
             String output = ""; //Write all output to this string
 
             //Code here
-            
-            
-            
-            
+            writer.println("Hello, Mr. Ark!");
+            writer.println("Hello, Mr. Knave!");
             
             //Code here
             writer.close();
-            
+
+            /*
             //Use open comment before this line
             long endTime = System.nanoTime();
 
@@ -76,7 +75,7 @@ public class ${name}
             }
         }
         //Use close comment after this line
-        
+        */
     }
 
     public static String formatTitle(String title)
